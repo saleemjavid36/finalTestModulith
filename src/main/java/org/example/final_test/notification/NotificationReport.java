@@ -1,12 +1,16 @@
 package org.example.final_test.notification;
 
-import org.example.final_test.payment.api.PaymentApiService;
+import org.example.final_test.billing.BillingService;
 
 public class NotificationReport {
 
-    private final PaymentApiService paymentApiService;
+    private final BillingService billingService;
 
-    public NotificationReport(PaymentApiService paymentApiService) {
-        this.paymentApiService = paymentApiService;
+    public NotificationReport(BillingService billingService) {
+        this.billingService = billingService;
+    }
+
+    public void sendNotification() {
+        System.out.println("Notification sent");
     }
 }

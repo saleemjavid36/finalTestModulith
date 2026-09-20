@@ -1,17 +1,16 @@
 package org.example.final_test.payment;
 
-import org.example.final_test.billing.BillingHelper;
+import org.example.final_test.notification.NotificationReport;
 
 public class PaymentService {
 
-    private final BillingHelper billingHelper;
+    private final NotificationReport notificationReport;
 
-    public PaymentService(BillingHelper billingHelper) {
-        this.billingHelper = billingHelper;
+    public PaymentService(NotificationReport notificationReport) {
+        this.notificationReport = notificationReport;
     }
 
     public void processPayment() {
-        System.out.println("Payment processed");
-        billingHelper.help();
+        notificationReport.sendNotification();
     }
 }

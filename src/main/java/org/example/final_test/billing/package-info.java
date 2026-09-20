@@ -1,6 +1,6 @@
 @ApplicationModule(
         type = ApplicationModule.Type.CLOSED,
-        allowedDependencies = "payment :: api"
+        allowedDependencies = "payment :: *"
 )
 package org.example.final_test.billing;
 

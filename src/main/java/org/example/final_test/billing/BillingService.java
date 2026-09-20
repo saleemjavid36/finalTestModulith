@@ -1,16 +1,16 @@
 package org.example.final_test.billing;
 
-import org.example.final_test.payment.api.PaymentApiService;
+import org.example.final_test.payment.PaymentService;
 
 public class BillingService {
 
-    private final PaymentApiService paymentApiService;
+    private final PaymentService paymentService;
 
-    public BillingService(PaymentApiService paymentApiService) {
-        this.paymentApiService = paymentApiService;
+    public BillingService(PaymentService paymentService) {
+        this.paymentService = paymentService;
     }
 
     public void bill() {
-        paymentApiService.processPayment();
+        paymentService.processPayment();
     }
 }
