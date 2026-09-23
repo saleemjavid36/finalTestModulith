@@ -1,30 +1,24 @@
-package org.example.final_test.teacher;
-
+package org.example.final_test.tschool;
 import org.example.final_test.student.StudentService;
 import org.example.final_test.student.controller.StudentController;
 import org.example.final_test.student.repository.StudentRepository;
-import org.example.final_test.student.dto.StudentDto;
 
+public class TSchoolService {
 
-public class TeacherService {
     private final StudentRepository studentRepository;
     private final StudentService studentService;
     private final StudentController studentController;
-    private final StudentDto studentDto;
+    // private final StudentDto studentDto;
 
-    public TeacherService(
+    public TSchoolService(
             StudentRepository studentRepository,
             StudentService studentService,
-            StudentController studentController,
-            StudentDto studentDto
+            StudentController studentController
+            // StudentDto studentDto
     ) {
         this.studentRepository = studentRepository;
         this.studentService = studentService;
         this.studentController = studentController;
         // this.studentDto = studentDto;
-    }
-
-    public String getStudent() {
-        return studentRepository.findStudent();
     }
 }
